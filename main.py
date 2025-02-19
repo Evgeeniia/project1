@@ -1,5 +1,8 @@
 import numpy as np
 
+from matrix import Matrix
+from calculator import Calculator
+
 # Ввод матрицы размерности n * m
 n = int(input("Введите количество строк (n): "))
 m = int(input("Введите количество столбцов (m): "))
@@ -10,12 +13,15 @@ for i in range(n):
     row = list(map(float, input(f"Введите элементы {i + 1}-й строки через пробел: ").split()))
     matrix.append(row)
 
-# Преобразуем список в numpy массив
-matrix = np.array(matrix)
+def main():
 
-# Вычисление среднего арифметического для каждого столбца
-column_means = np.mean(matrix, axis=0)
+    #Матрица
+    matrix = Matrix(n, m, data)
 
-# Вывод результата
+    #Среднее арифметическое столбцов
+    calculator = Calculator(matrix)
+    column = calculator.calculate()
+
+# Вывод 
 for i in range(m):
-    print(f"Среднее арифметическое для столбца {i + 1}: {column_means[i]}")
+    print(f"Среднее арифметическое {i + 1}: {column[i]}")
