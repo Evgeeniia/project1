@@ -18,7 +18,7 @@ def main():
     #Матрица
     matrix = Matrix(n, m, data)
 
-    #Среднее арифметическое столбцов
+    #Среднее арифметическое 
     calculator = Calculator(matrix)
     column = calculator.calculate()
 
