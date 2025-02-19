@@ -1,6 +1,6 @@
 import numpy as np
 
-class Calculator:
+class сalculator:
     def init(matr, matrix):
         matr.matrix = matrix.get_matrix()
 
